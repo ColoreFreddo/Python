@@ -1,0 +1,32 @@
+class Rettangolo:
+    
+    def __init__(self, base, altezza):
+        self._base = base
+        self._altezza = altezza
+    
+    def get_base(self):
+        return self._base
+    
+    def set_base(self, base):
+        self._base = base
+    
+    def get_altezza(self):
+        return self._altezza
+    
+    def set_altezza(self, altezza):
+        self._altezza = altezza
+    
+    def calcola_area(self):
+        return self._base * self._altezza
+    
+    def calcola_perimetro(self):
+        return 2 * (self._base + self._altezza)
+    
+    def contiene(self, rettangolo):
+        if self._base >= rettangolo.get_base() and self._altezza >= rettangolo.get_altezza():
+            return True
+        else:
+            return False
+r1 = Rettangolo(10,20)
+r2 = Rettangolo(5,8)
+print(r1.contiene(r2))
