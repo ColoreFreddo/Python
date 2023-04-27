@@ -1,8 +1,8 @@
 class Persona:
     def __init__(self, nome, indirizzo, eta):
-        self.nome = nome
-        self.indirizzo = indirizzo
-        self.eta = eta
+        self.__nome = nome
+        self.__indirizzo = indirizzo
+        self.__eta = eta
 
     def __str__(self):
         return f'Nome: {self.nome}\nIndirizzo: {self.indirizzo}\nEtà: {self.eta}'
